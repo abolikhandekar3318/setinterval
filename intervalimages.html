@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var image = [
+        "url('https://th.bing.com/th?id=ORMS.d7da2d08759f735b3d64223d317943e6&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0')",
+        "url('https://g.foolcdn.com/editorial/images/503108/sports-equipment-sporting-goods-balls-getty.jpg')",
+        "url('https://th.bing.com/th/id/OIP.EgIsEsV-3KemX1Slj4TZkwHaEK?pid=ImgDet&rs=1')"
+    ];
+        var index = 0;
+
+       
+        setInterval(function() {
+            let divRef = document.getElementById("img")
+            divRef.style.backgroundImage = image[index];
+            if(index===image.length-1){
+                index=0;
+
+            }else{
+                index++;
+            }
+        },2000)
+
+       ();
+    </script>
+
+    <style>
+        #img {
+            height: 500px;
+            border: 2px red solid;
+            width: 500px;
+            align-content: center;
+            margin-top: 50px;
+            margin-left: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="img">
+
+    </div>
+</body>
+
+</html>
